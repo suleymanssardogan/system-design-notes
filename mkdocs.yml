@@ -1,0 +1,88 @@
+site_name: System Design Notes
+site_description: Personal system design notes for learning, revision, and building intuition.
+site_url: https://suleymanssardogan.github.io/system-design-notes/
+repo_url: https://github.com/suleymanssardogan/system-design-notes
+repo_name: suleymanssardogan/system-design-notes
+edit_uri: edit/main/docs/
+
+# MkDocs excludes templates/ by default; publish the writing template.
+exclude_docs: |
+  !/templates/
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Fundamentals:
+    - Overview: fundamentals/index.md
+    - "Scaling": fundamentals/scaling.md
+    - "Load Balancing": fundamentals/load-balancing.md
+    - "Database Replication": fundamentals/database-replication.md
+    - "Caching": fundamentals/caching.md
+    - "CDN": fundamentals/cdn.md
+    - "Stateless Architecture": fundamentals/stateless-architecture.md
+    - "Message Queues": fundamentals/message-queues.md
+    - "Sharding": fundamentals/sharding.md
+  - System Designs:
+    - Overview: designs/index.md
+    - "Rate Limiter": designs/rate-limiter.md
+    - "Consistent Hashing": designs/consistent-hashing.md
+    - "Key-Value Store": designs/key-value-store.md
+    - "Unique ID Generator": designs/unique-id-generator.md
+    - "URL Shortener": designs/url-shortener.md
+    - "Web Crawler": designs/web-crawler.md
+    - "Notification System": designs/notification-system.md
+    - "News Feed": designs/news-feed.md
+    - "Chat System": designs/chat-system.md
+    - "Search Autocomplete": designs/search-autocomplete.md
+    - "YouTube": designs/youtube.md
+    - "Google Drive": designs/google-drive.md
+  - Interview Framework:
+    - Overview: interview-framework/index.md
+    - "Back-of-the-Envelope Estimation": interview-framework/back-of-the-envelope-estimation.md
+  - Vocabulary: vocabulary.md
+  - Writing Template: templates/topic-template.md
