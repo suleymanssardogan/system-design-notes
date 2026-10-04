@@ -1,6 +1,6 @@
 # Topic Name
 
-<!-- Copy this file to the relevant section, rename it, and update mkdocs.yml navigation. Remove comments if desired. -->
+<!-- Copy this file to the relevant section, rename it, and link it from the section overview; sidebar navigation updates automatically. Remove comments if desired. -->
 
 ## What is it?
 
